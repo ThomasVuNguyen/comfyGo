@@ -1,0 +1,8 @@
+golang.org/x/text v0.0.0-20170915032832-14c0d48ead0c/go.mod h1:NqM8EUOU14njkJ3fqMW+pc6Ldnwhi/IjpwHt7yyuwOQ=
+golang.org/x/text v0.13.0 h1:ablQoSUd0tRdKxZewP80B+BaqeKJuVhuRxj/dkrun3k=
+golang.org/x/text v0.13.0/go.mod h1:TvPlkZtksWOMsz7fbANvkp4WM8x/WCo/om8BMLbz+aE=
+rsc.io/quote/v4 v4.0.1 h1:i/LHLEinr65wwTCqlP4OnMoMWeCgnFIZFvifdXNK+5M=
+rsc.io/quote/v4 v4.0.1/go.mod h1:w/DafQky66grMesu3uPhdDMS3knhBippwwemZtMOyCI=
+rsc.io/sampler v1.3.0/go.mod h1:T1hPZKmBbMNahiBKFy5HrXp6adAjACjK9JXDnKaTXpA=
+rsc.io/sampler v1.99.99 h1:7i08f/p5TBU5joCPW3GjWG1ZFCmr28ybGqlXtelhEK8=
+rsc.io/sampler v1.99.99/go.mod h1:T1hPZKmBbMNahiBKFy5HrXp6adAjACjK9JXDnKaTXpA=
