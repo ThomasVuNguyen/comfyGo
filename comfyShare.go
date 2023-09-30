@@ -1,44 +1,20 @@
 package main
 
 import (
-	"fmt"
-
-	"rsc.io/quote/v4"
+	"net/http"
+	"os"
 )
 
-var age int = 10
-var name string = "yo"
-
-type Person struct {
-	Name FullName
-	Age  int
+func indexHandler(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("<h1>Hello world!</h1>"))
 }
 
-type FullName struct {
-	firstname string
-	lastname  string
-}
-
-var Tom Person = Person{FullName{"tom", "nguyen"}, 20}
-
-func (p Person) Speak() {
-	fmt.Println("hello from" + p.Name.firstname)
-}
-func doSomething(a int, b int) int {
-	return a + b
-}
-func incrementAge(a *int) {
-	*a = *a + 1
-}
 func main() {
-	age = 20
-	name = "bob"
-	fmt.Println(quote.Go())
-	fmt.Println(name)
-	fmt.Println(Tom.Name.firstname)
-	fmt.Println(doSomething(1, 2))
-	incrementAge(&age)
-	fmt.Println(&age)
-	fmt.Println(*&age)
-	Tom.Speak()
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "3000"
+	}
+	mux := http.NewServeMux()
+	mux.HandleFunc("/", indexHandler)
+	http.ListenAndServe(":"+port, mux)
 }
